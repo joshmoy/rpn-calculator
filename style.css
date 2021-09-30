@@ -96,6 +96,11 @@ button.number:hover {
   transition: background-color 0.5s ease;
 }
 
+button.number:active {
+  background-color: #2a9d8f;
+  transition: background-color 0.5s ease;
+}
+
 #enter {
   background-color: #e9c46a;
 }
@@ -106,6 +111,7 @@ button.number:hover {
 
 #showCase {
   height: 70;
+  overflow-y: scroll;
 }
 #display {
   height: 30px;
@@ -186,5 +192,20 @@ button.number:hover {
   100% {
     display: block;
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calculator-section {
+    width: 340px;
+  }
+
+  button {
+    width: 60px;
+  }
+
+  .display-section,
+  .buttons-section {
+    padding: 20px;
   }
 }
