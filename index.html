@@ -4,33 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="/style.css" /> -->
+    <link rel="stylesheet" href="/style.css" />
     <!-- fot github pages -->
-    <link rel="stylesheet" href="/rpn-calculator/style.css" />
+    <!-- <link rel="stylesheet" href="/rpn-calculator/style.css" /> -->
     <title>RPN Calculator</title>
   </head>
   <body>
-    <div id="display">0</div>
-    <div id="showCase"></div>
-    <button data-digit="1" class="number digits">1</button>
-    <button data-digit="2" class="number digits">2</button>
-    <button data-digit="3" class="number digits">3</button>
-    <button data-digit="4" class="number digits">4</button>
-    <button data-digit="5" class="number digits">5</button>
-    <button data-digit="6" class="number digits">6</button>
-    <button data-digit="7" class="number digits">7</button>
-    <button data-digit="8" class="number digits">8</button>
-    <button data-digit="9" class="number digits">9</button>
-    <button data-digit="0" class="number digits">0</button>
-    <button id="decimal" class="number">.</button>
-    <button data-operator="*" class="number operators">*</button>
-    <button data-operator="/" class="number operators">/</button>
-    <button data-operator="+" class="number operators">+</button>
-    <button data-operator="-" class="number operators">-</button>
-    <button id="clear" class="number">CE</button>
-    <button id="reset" class="number">C</button>
-    <button id="enter" type="button">ENTER</button>
-    <!-- <script src="/script.js"></script> -->
-    <script src="/rpn-calculator/script.js"></script>
+    <div class="container">
+      <h1>RPN Calculator</h1>
+      <div class="calculator-section">
+        <div class="display-section">
+          <div id="showCase"></div>
+          <div id="display">0</div>
+        </div>
+        <div class="buttons-section">
+          <div class="flex">
+            <button id="clear" class="number w-30">CE</button>
+            <button id="reset" class="number w-30">C</button>
+            <button data-operator="/" class="number operators">/</button>
+          </div>
+          <div class="flex">
+            <button data-digit="7" class="number digits">7</button>
+            <button data-digit="8" class="number digits">8</button>
+            <button data-digit="9" class="number digits">9</button>
+            <button data-operator="*" class="number operators">*</button>
+          </div>
+          <div class="flex">
+            <button data-digit="4" class="number digits">4</button>
+            <button data-digit="5" class="number digits">5</button>
+            <button data-digit="6" class="number digits">6</button>
+            <button data-operator="-" class="number operators">-</button>
+          </div>
+          <div class="flex">
+            <button data-digit="1" class="number digits">1</button>
+            <button data-digit="2" class="number digits">2</button>
+            <button data-digit="3" class="number digits">3</button>
+            <button data-operator="+" class="number operators">+</button>
+          </div>
+          <div class="flex">
+            <button data-digit="0" class="number digits w-50">0</button>
+            <button id="decimal" class="number">.</button>
+            <button id="enter" type="button">ENTER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+    <!-- <script src="/rpn-calculator/script.js"></script> -->
   </body>
 </html>

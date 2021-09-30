@@ -36,9 +36,7 @@ window.onload = function (e) {
     digit.addEventListener("click", function () {
       disableOperations();
       contentDisplay = displayContent();
-      console.log("display", contentDisplay.content);
       if (fresh) {
-        // stack.push(Number(contentDisplay.content));
         contentDisplay.display.textContent = digit.dataset.digit;
       } else {
         let contentDisplay = displayContent();
@@ -55,7 +53,6 @@ window.onload = function (e) {
     disableOperations();
     contentDisplay = displayContent();
     let index = contentDisplay.content.indexOf(".");
-    console.log("index", index);
     if (fresh) {
       stack.push(Number(contentDisplay.content));
       contentDisplay.display.textContent = "0.";
@@ -71,11 +68,9 @@ window.onload = function (e) {
       let contentDisplay = displayContent();
       let lastNum = stack[stack.length - 1];
       let secondToLastNum = stack[stack.length - 2];
-      console.log("lastNum", lastNum, secondToLastNum);
       let result = eval(`${secondToLastNum} ${this.dataset.operator} ${lastNum}`);
       contentDisplay.display.textContent = result.toString();
       stack.splice(-2, 2);
-      console.log(typeof result);
       stack.push(result);
       contentDisplay.showCase.textContent = stack.toString().split(",").join(" ");
       if (stack.length >= 2) {
@@ -92,7 +87,6 @@ window.onload = function (e) {
     let contentDisplay = displayContent();
     stack.push(Number(contentDisplay.content));
     contentDisplay.showCase.textContent = stack.length > 0 && stack.toString().split(",").join(" ");
-    console.log(JSON.stringify(stack));
     if (stack.length >= 2) {
       enableOperations();
     } else {
@@ -112,7 +106,7 @@ window.onload = function (e) {
     let contentDisplay = displayContent();
     disableOperations();
     contentDisplay.display.textContent = "0";
-    contentDisplay.showCase.textContent = "0";
+    contentDisplay.showCase.textContent = " ";
     stack = [];
     fresh = true;
   });
